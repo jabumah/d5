@@ -23,7 +23,9 @@ steps:
   
 - task: CmdLine@2
   inputs:
-    script: 'ls -l'
+    script: |
+      cd webapp/target
+      ls -l
 - task: CopyFiles@2
   inputs:
     Contents: '**/*.war'
